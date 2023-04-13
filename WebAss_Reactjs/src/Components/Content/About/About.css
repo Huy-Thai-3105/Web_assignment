@@ -1,0 +1,151 @@
+.about-us {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    text-align: justify;
+}
+.about-us>div  {
+    flex-basis: 25%;
+}
+h4 {
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    align-items: center;
+}
+.about-us__col1>div {
+    height: 320px;
+}
+.about-us__col2>div,
+.about-us__col3>div,
+.about-us__col4>div {
+    height: 400px;
+}
+
+.about-us__col2 {
+    margin-top: 7rem;
+}
+.about-us__col3 {
+    margin-top: 14rem;
+}
+.about-us__col4 {
+    margin-top: 0rem;
+}
+
+.team-member {
+    background: top center no-repeat;
+    background-size: cover;
+}
+.team-member>div {
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.450);
+    font-size: 1.4rem;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    animation: fadeIn 0.5s ease;
+    
+}
+.team-member a {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(150%) contrast(102%);
+}
+.team-member:hover >div {
+    display: flex;
+}
+.about-us__col1 .team-member {
+    background-image: url(../../../../public/imgs/member/Thoai.jpg);
+}
+.about-us__col2 .team-member {
+    background-image: url(../../../../public/imgs/member/TA.jpg);
+}
+.about-us__col3 .team-member:first-child {
+    background-image: url(../../../../public/imgs/member/Tri.jpg);
+}
+.about-us__col3 .team-member{
+    background-image: url(../../../../public/imgs/member/Tri.jpg);
+}
+.about-us__col4 .team-member{
+    background-image: url(../../../../public/imgs/member/thai.jpg);
+}
+
+.solgan {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 3rem 1rem 1rem 1rem; 
+    background-color: var(--color-focus);
+    color: white;
+    height:10px;
+}
+.solgan>img {
+    width: 30px;
+    filter: invert(100%) sepia(92%) saturate(2%) hue-rotate(65deg) brightness(109%) contrast(100%);
+}
+.solgan>p {
+    font-family: 'Oswald', sans-serif;
+}
+
+.about {
+    padding: 3rem 1rem 1rem 1rem; 
+    background-color: #282D33;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.contact {
+    text-align: center;
+    height: 150px !important;
+    padding: 2rem 1rem 1rem 1rem; 
+    background-color: rgb(69, 116, 170);
+    color: white;
+}
+
+
+.contact a {
+    color: white;
+    opacity: 0.7;
+}
+.contact a:hover {
+    opacity: 1;
+}
+
+.our-team {
+    text-align: right;
+    position: absolute;
+    top : 50rem ;
+    right: 3rem;
+    bottom: 1px;
+}
+.our-team>h1 {
+    font-size: 4rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--color-focus);
+}
+
+/********************** RESPONSIVE ********************* */
+@media (max-width: 1200px) {
+    .about-contact {
+        padding: 1rem;
+    }
+}
+@media (max-width: 992px) {
+    .our-team {
+        right: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us {
+        flex-flow: column;
+    }
+    .about-us__col2,
+    .about-us__col3,
+    .about-us__col4 {
+        margin-top: 1rem;
+    }
+    .our-team {
+        position: relative;
+    }
+}

@@ -1,0 +1,83 @@
+.login-bg {
+    width: 100vw;
+    height: 100vh;
+    background: url(../../../public/imgs/g113.png) center left no-repeat;
+    background-size: cover;
+}
+
+.login {
+    width: 600px;
+    height: 550px;
+    max-width: 100%;
+
+    border-radius: 1rem;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.150);
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -250px;
+    right: 5rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.login__form {
+    width: 600px;
+    max-width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.login__form>.btn {
+    width: 100%;
+}
+
+.login__other {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-err {
+    margin-top: 0.5rem;
+}
+.login-err--red {
+    color: tomato;
+    border-color: tomato;
+}
+.login-err--red:focus {
+    border-color: tomato !important;
+    box-shadow: 0 0 0 0.25rem rgba(253, 49, 13, 0.25) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .login {
+        right: 50%;
+        margin-right: -300px;
+        top: 50%;
+        margin-top: -250px;
+    }    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 576px) {
+    .login {
+        left: 0;
+        top: 45%;
+    }
+    .login-bg {
+        background-position: center;
+    }
+    .login__form {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,234 @@
+:root {
+  --color-primary: #f6f6f6;
+  --color-secondary: #cabdb0;
+  --color-background: whitesmoke;
+  --color-focus: #246bc6;
+
+
+}
+
+/* ****** RESET CSS ******* */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  scrollbar-width: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* ***** BASE HTML SETTING ******* */
+
+.grid {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.content {
+  margin-top: 130px;
+  box-sizing: border-box;
+  margin-bottom: 5rem;
+}
+
+
+/* ***** BUTTON ****** */
+.button__nav,
+.btn-close {
+  padding: 0.5rem !important; 
+  border-radius: 0.5rem !important;
+  background-color: whitesmoke;
+  color: black;
+}
+.button_nav:hover {
+  color: var(--color-focus) !important;
+}
+.button__submit {
+  padding: 0.5rem !important; 
+  border-radius: 0.5rem !important;
+  background-color: var(--color-focus);
+  color: white;
+}
+.button__submit:hover {
+  background-color: #1f57a0;
+  color: white;
+}
+.button__buy {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #a0c7e0;
+  border-radius: 0.5rem !important;
+  color: #9abed4;
+}
+.button__addcart {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #dfc36a;
+  border-radius: 0.5rem !important;
+  color: #dfc36a;
+}
+.button__delete {
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+.button__buy:hover {
+  background-color: #a0c7e0;
+  color: white;
+}
+.button__addcart:hover {
+  background-color: #ecc454;
+  color: white;
+}
+.button__delete:hover {
+  color: rgb(253, 128, 106);
+}
+.button--selected {
+  background-color: var(--color-focus) !important;
+  color: white !important;
+}
+
+.img--selected {
+  border: 2px solid #79a1f6;
+  box-sizing: border-box;
+}
+
+.focus-text {
+  color: var(--color-focus);
+}
+.minus-text {
+  color: tomato;
+}
+.add-text {
+  color: rgb(44, 155, 44);
+}
+
+.disappear {
+  animation: fadeOutUp 0.5s ease;
+  display: none !important;
+}
+
+
+/* ******** CARD ******** */
+
+.cardlist {
+  display: flex;
+  flex-flow: row wrap; 
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+
+/* ******** ARROW ******** */
+.arrow {
+  width: 100%;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.arrow>div {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5)
+}
+.arrow>div:hover {
+  transform: scale(200%);
+  transition: transform ease 0.1s;
+}
+
+
+@keyframes fade_in {
+  from {
+      transform: translateY(10%);
+      opacity: 0.5;
+  }
+  to {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+
+@keyframes move_in {
+  from {
+      transform: translateX(-30%);
+      opacity: 0.3;
+  }
+  to {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+}
+
+/* ******* RESPONSIVE ******* */
+@media (max-width: 992px) {
+
+  .tab {
+      flex-flow: column nowrap;
+      row-gap: 1rem;
+  }
+  .tab-option {
+      flex-direction: row;
+      justify-content: center;
+  }
+  .tab-option>div>div {
+      flex-basis: 25%;
+  }
+  .tab-option-detail {
+      padding: 0 1rem 1rem 1rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .arrow {
+    display: none;
+  }
+  .cardlist {
+      flex-flow: column wrap !important;
+  }
+  
+  .content {
+      margin-top: 150px;
+  }
+
+  .tab-option {
+      height: 55px;
+  }
+  .tab-option>div>div {
+      flex-basis: 25%;
+  }
+  .tab-option>div>div>img {
+      display: none;
+  }
+  .tab-line:not([size]) {
+      width: 25%;
+  }
+}

@@ -1,0 +1,146 @@
+label {
+    margin-left: 0.5rem;
+}
+
+.list-title {
+    height: 7rem;
+    background: url(../../../../public/imgs/product-list-bg.png) center center no-repeat;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-content {
+    display: flex;
+    flex-flow: column wrap;
+
+    position: relative;
+}
+
+.filter-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.list-fifter {
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+
+    position: absolute;
+    left: calc((100vw - 1200px)/2);
+    top: 15%;
+
+    transition: all 0.3s ease;
+}
+.list-fifter>div:first-child {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.list-fifter__title {
+    padding-left: 1rem;
+    align-items: center;
+    color: white;
+}
+.list-fifter__button {
+    width: 100%;
+}
+.list-fifter__menu {
+    width: 100%;
+    padding: 1rem;
+}
+.dropdown-menu.show {
+    width: fit-content;
+}
+
+
+.list-product {
+    box-sizing: border-box;
+    flex-basis: 75%;
+}
+.list-product.cardlist {
+    column-gap: 1.3rem;
+}
+.list-product__sort select {
+    margin-left: 10px;
+    display: inline-block;
+    width: 200px;
+}
+
+.list-direction {
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.list-direction>div {
+    border: 1px solid rgba(0, 0, 0, 0.150);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color-background);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .list-title {
+        background-size: cover;
+    }
+    .list-content {
+        flex-flow: column wrap;
+    }
+    .list-fifter {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        left: 0;
+    }
+    .list-fifter__title {
+        margin-top: 0.5rem;
+    }
+    .list-fifter>div:last-child {
+        flex-basis: 85%;
+
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+    }
+    .list-fifter__title>div>input {
+        margin-top: 0.5rem;
+    }
+}
+@media (max-width: 576px) {
+    .list-fifter__title {
+        flex-basis: 100% !important;
+        flex-flow: row wrap;
+        justify-content: start;
+    }
+    .list-fifter {
+        justify-content: center;
+        height: 600px;
+        overflow-y: scroll;
+        background-size: cover;
+        top: 10%;
+    }
+    
+    .list-fifter>div:first-child {
+        flex-flow: column;
+        flex-basis: 100%;
+        gap: 0.5rem;
+    }
+}

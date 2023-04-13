@@ -1,0 +1,43 @@
+.new-detail .codex-editor--empty {
+    display: none !important;
+}
+.new-detail .cdx-simple-image__caption {
+  padding-top: 0;
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+.new-detail .cdx-simple-image__picture {
+  text-align: center;
+}
+.new-detail .cdx-simple-image__picture > img {
+  width: 80%;
+}
+.new-detail .codex-editor__redactor {
+  padding-bottom: 0 !important;
+  margin-bottom: 1rem !important;
+}
+.new-detail .ce-block__content {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0.5rem;
+  transition: all .5s ease;
+}
+.ce-block + .ce-block {
+  margin-top: 0.5rem;
+}
+
+.ce-paragraph {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .cdx-simple-image__picture > img {
+      width: 100%;
+  }
+  .ce-block + .ce-block {
+      margin-top: 0rem;
+  }
+}

@@ -1,0 +1,26 @@
+.not-found {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-code {
+    font-size: 200px;
+    background: -webkit-linear-gradient(#246bc6 5%, #6600ff 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.go-home {
+    margin-top: 0.5rem;
+    background-color: #246bc6;
+}
+.go-home>a {
+    color: white;
+}
+.go-home:hover {
+    color: white;
+    opacity: 0.8;
+}

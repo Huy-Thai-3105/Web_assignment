@@ -1,0 +1,16 @@
+#postEditorjs {
+    padding-top: 0.5rem !important;
+}
+
+.codex-editor--empty {
+    display: none;
+}
+
+.codex-editor__redactor {
+    padding-bottom: 2rem !important;
+}
+
+.cdx-simple-image {
+    width: 650px;
+    margin: auto;
+}

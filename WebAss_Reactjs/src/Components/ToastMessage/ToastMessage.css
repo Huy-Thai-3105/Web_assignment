@@ -1,0 +1,44 @@
+.toast-message {
+    width: 400px;
+    height: 90px;
+    padding: 1rem;
+    background-color: white;
+    border-left: 10px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: fixed !important;
+    top: 70px !important;
+    right: 50px !important;
+    z-index: 10;
+
+    animation: fadeIn 0.5s ease, fadeOut 0.5s linear 1s forwards;
+}
+
+.toast-message__header--success {
+    color: green;
+}
+.toast-message--success {
+    border-color: green;
+}
+
+.toast-message__header--fail {
+    color: tomato;
+}
+.toast-message--fail {
+    border-color: tomato;
+}
+
+/********************** RESPONSIVE ********************* */
+@media (max-width: 576px) {
+    .toast-message {
+        width: 250px;
+        right: 10px !important;
+    }
+
+}

@@ -1,0 +1,15 @@
+#postEditorjs {
+    padding-top: 0.5rem !important;
+}
+
+.add-news .codex-editor--empty:first-child {
+    display: none;
+}
+
+.add-news .codex-editor--empty:nth-child(2) {
+    display: block !important;
+}
+
+.codex-editor__redactor {
+    padding-bottom: 2rem !important;
+}

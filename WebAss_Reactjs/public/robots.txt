@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /account
+Disallow: /products/add
+Disallow: /products/edit
+Disallow: /news/add
+
