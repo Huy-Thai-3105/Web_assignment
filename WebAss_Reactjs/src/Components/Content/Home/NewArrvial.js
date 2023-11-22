@@ -11,6 +11,7 @@ const NewArrvial = () => {
             setNewArrivalProducts(data.slice(0, Math.min(8, data.length)))
         }
     }, [data])
+    console.log("result",data);
 
     return (
         <div className="new-arrival grid mb-3 py-5">

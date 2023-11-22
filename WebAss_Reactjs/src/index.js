@@ -27,7 +27,7 @@ const container = document.getElementById('root')
 const root = ReactDOM.createRoot(container)
 
 root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <UserProvider>
             <BrowserRouter>
                 <Routes>
@@ -57,5 +57,5 @@ root.render(
                 </Routes>
             </BrowserRouter>
         </UserProvider>
-    </React.StrictMode>
+    // </React.StrictMode>
 )

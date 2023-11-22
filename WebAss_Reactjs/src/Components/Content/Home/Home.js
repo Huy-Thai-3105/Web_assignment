@@ -16,8 +16,8 @@ const Home = () => {
         <div className='content'>
             <AdSlider />
             <NewArrvial />
-            <Banner />
-            <TopProduct />
+            <Banner /> 
+            <TopProduct /> 
             <NewestNews />
         </div>
     )

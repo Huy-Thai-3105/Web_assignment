@@ -25,7 +25,7 @@ export const UserProvider = ({ children }) => {
             removeUserCookies('token')
             removeUserCookies('login')
         }
-    }, [token, login])
+    }, [token, login, setUserCookies, removeUserCookies])
 
     React.useEffect(() => {
         if (cart.length !== 0) {
@@ -34,7 +34,7 @@ export const UserProvider = ({ children }) => {
         }
         else 
             removeUserCookies('cart')
-    }, [cart])
+    }, [cart, removeUserCookies, setUserCookies])
 
     const handleLogin = async (username, password) => {
         if (username === '')
@@ -126,26 +126,33 @@ export const UserProvider = ({ children }) => {
             },
             data : data
         }
+        // eslint-disable-next-line no-unused-vars
         const respone = await axios(config)
     }
 
     const handleAddToCart = (id, name, brand, trimName, imgs, price, quantity) => {
-        const newItem = {
-            id, 
-            name,
-            brand,
-            trimName, 
-            imgs, 
-            price,
-            quantity
-        }
-        if (cart.filter(item => item.id === newItem.id).length === 0) {
-            setCart([...cart, newItem])
-            setAddToCartMessage('Product has been add to your cart')
+        if (login === true){
+            const newItem = {
+                id, 
+                name,
+                brand,
+                trimName, 
+                imgs, 
+                price,
+                quantity
+            }
+            if (cart.filter(item => item.id === newItem.id).length === 0) {
+                setCart([...cart, newItem])
+                setAddToCartMessage('Product has been add to your cart')
+            }
+            else {
+                setAddToCartMessage('Product has already in your cart')
+            }
         }
         else {
-            setAddToCartMessage('Product has already in your cart')
+            setAddToCartMessage('Please sign in to add product')
         }
+        
     }
 
     const handleRemoveFromCart = (id) => {

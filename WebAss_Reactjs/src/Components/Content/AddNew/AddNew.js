@@ -19,10 +19,9 @@ const AddNew = () => {
         if (!login || !userid) {
             navigate('/')
         }
-    }, [])
-
+    }, [login, navigate, userid])
     const editor = new EditorJS({
-        holder: 'postEditorjs',
+        holder: 'addPostEditorjs',
         tools: {
             header: Header,
             list: {
@@ -81,7 +80,8 @@ const AddNew = () => {
 
     return (
         <div className='content add-news'>
-            <div id='postEditorjs'></div>
+            <div id='addPostEditorjs'></div>
+            <br/>
             <div className="d-flex justify-content-center">
                 <button 
                     className="submit-post button__submit btn"

@@ -27,7 +27,7 @@ const useFetchData = (baseUrl, header) => {
         return () => {
             source.cancel()
         }
-    }, [baseUrl])
+    }, [baseUrl, header])
 
     return {data, fetchErr}
 }

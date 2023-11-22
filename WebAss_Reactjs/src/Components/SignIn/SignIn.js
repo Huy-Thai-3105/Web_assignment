@@ -20,7 +20,7 @@ const SignIn = () => {
     React.useEffect(() => {
         if (token)
             navigate('/')
-    }, [token])
+    }, [navigate, token])
 
     React.useEffect(() => {
         if (loginErr === 'Invalid username')
